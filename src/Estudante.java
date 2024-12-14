@@ -37,34 +37,11 @@ public class Estudante extends Pessoa {
         }
 
         public Double getNotaRecuperacao() {
-            return notaRecuperacao;
+            return notaRecuperacao; // "Recuperacao"
         }
-    
+
         public void setNotaRecuperacao(Double notaRecuperacao) {
             this.notaRecuperacao = notaRecuperacao;
-        }
-    
-        public double calcularMedia() {
-            if (notas.isEmpty()) {
-                return 0; // ou lançar uma exceção, dependendo da lógica desejada
-            }
-            
-            double soma = 0;
-            for (Double nota : notas) {
-                soma += nota;
-            }
-            return soma / notas.size();
-        }
-    
-        public String getSituacao() {
-            double media = calcularMedia();
-            if (media >= 7) {
-                return "APROVADO";
-            } else if (media >= 2.5) {
-                return "EM RECUPERAÇÃO";
-            } else {
-                return "REPROVADO";
-            }
         }
     
         @Override
