@@ -1,24 +1,18 @@
 // Classe Curso
-public class Curso {
-    private String nome;
-    private int qtdSemestres;
-    private Professor coordenador;
+class Curso {
+    private double mediaAprovacao;
+    private double mediaRecuperacao;
 
-    public Curso(String nome, int qtdSemestres, Professor coordenador) {
-        this.nome = nome;
-        this.qtdSemestres = qtdSemestres;
-        this.coordenador = coordenador;
+    public Curso(double mediaAprovacao, double mediaRecuperacao) {
+        this.mediaAprovacao = mediaAprovacao;
+        this.mediaRecuperacao = mediaRecuperacao;
     }
 
-    public String getNome() {
-        return nome;
+    public double getMediaAprovacao() {
+        return mediaAprovacao;
     }
 
-    public int getQtdSemestres() {
-        return qtdSemestres;
-    }
-
-    public Professor getCoordenador() {
-        return coordenador;
+    public double getMediaRecuperacao() {
+        return mediaRecuperacao;
     }
 }
