@@ -5,7 +5,6 @@ public class Professor extends Pessoa {
     public Professor(String nome, String cpf, String endereco, String telefone, int siape) {
         super(nome, cpf, endereco, telefone);
         this.siape = siape;
-        this.siape = siape;
     }
 
     public int getSiape() {
