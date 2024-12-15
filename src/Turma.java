@@ -9,15 +9,18 @@ public class Turma {
     private Professor professor;
     private List<Estudante> estudantes;
 
+    // Construtor padrão
     public Turma() {
         this.estudantes = new ArrayList<>();
     }
 
+    // Construtor com identificação
     public Turma(String identificacao) {
         this.identificacao = identificacao;
         this.estudantes = new ArrayList<>();
     }
 
+    // Getters e Setters
     public String getIdentificacao() {
         return identificacao;
     }
@@ -59,7 +62,7 @@ public class Turma {
     }
 
     public void printTurmaDetails() {
-        System.out.println("Turma: " + identificacao + " - Curso: " + curso.getNome() + " - Semestre: " + semestre);
+        System.out.println("Turma: " + identificacao + " - Curso: " + (curso != null ? curso.getNome() : "Não definido") + " - Semestre: " + semestre);
         if (professor != null) {
             professor.printData();
         }
